@@ -1,13 +1,18 @@
 {
 	"manifest_version": 2,
 	"name": "Teach Assist Average Calculator",
-	"description": "Adds a row to the teach assist table with your average",
-	"version": "3.0",
+	"description": "Click on the extention's icon to quickly see your average.\n Adds a new row in Teach Assist and displays your average in it",
+	"version": "3.1",
 	"author" : "Khalil L. Wheatle",
+	"permissions": ["declarativeContent", "storage", "contextMenus"],
 	"content_scripts": [
 		{
 		"matches": ["https://ta.yrdsb.ca/live/students/*","http://ta.yrdsb.ca/live/students/*"],
 		"js": ["myscript.js"]
 		}
-	]
+	],
+    "options_page": "options.html",
+	"browser_action": {
+      "default_popup": "popup.html"
+    }
 }
