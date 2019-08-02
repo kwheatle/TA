@@ -1,0 +1,13 @@
+{
+	"manifest_version": 2,
+	"name": "Teach Assist Average Calculator",
+	"description": "Adds a row to the teach assist table with your average",
+	"version": "3.0",
+	"author" : "Khalil L. Wheatle",
+	"content_scripts": [
+		{
+		"matches": ["https://ta.yrdsb.ca/live/students/*","http://ta.yrdsb.ca/live/students/*"],
+		"js": ["myscript.js"]
+		}
+	]
+}
